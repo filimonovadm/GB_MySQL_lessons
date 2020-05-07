@@ -1,0 +1,10 @@
+выполнена установка и настройка на ubuntu
+
+CREATE DATABASE example;
+use example;
+CREATE TABLE users (id INT, name VARCHAR(20));
+
+mysqldump example > example.sql
+mysql example < example.sql
+
+mysqldump mysql help_keyword --where="true limit 100" > /home/filimonov/Documents/mysql_lesson1/help_keyword_dump_limit100.sql
