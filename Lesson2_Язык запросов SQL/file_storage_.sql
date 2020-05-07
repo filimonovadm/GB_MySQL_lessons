@@ -1,21 +1,3 @@
-/*
- Задание 1
-*/
-
-insert into catalogs value
-	(null, null),
-	(null, null),
-	(null, null);
-
-update catalogs set name ='empty' where (name is null);
-
-/*update catalogs выполнить не получится, т.к. на столбец name установлен уникальный индекс.
-'update catalogs set name ='empty' where (name is null)	Error Code: 1062. Duplicate entry 'empty' for key 'unique_name'	0.000 sec'*/
-
-/*
-Задание 2
-*/
-
 drop table if exists media_files;
 create table media_files (
 	id serial primary key,
@@ -27,6 +9,9 @@ create table media_files (
     style varchar(128),
     owner_user_id int 
 );
+
+select * from media_files;
+describe media_files;
 
 insert into media_files values
 	(null, 
@@ -53,15 +38,8 @@ insert into media_files values
     'God knows, God knows',
     'rock',
     1);
+    
+select * from media_files;
 
-/*
-Задание 3
-*/
 
-insert into 
-	sample.cat
-select 
-	*
-from
-	shop.catalogs
-on duplicate key update id = values(id);
+show databases;

@@ -1,6 +1,5 @@
 /*
  Задание 1
- Задание 1
 */
 
 insert into catalogs value
