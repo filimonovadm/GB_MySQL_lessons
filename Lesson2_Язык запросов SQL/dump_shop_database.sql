@@ -1,4 +1,4 @@
-﻿/*
+/*
 mysqldump базы shop
 */
 
